@@ -93,7 +93,7 @@ RLEListResult RLEListRemove(RLEList list, int index) {
     if (ptrNext->next) {
         ptr->next = ptrNext->next;
         RLEListDestroy(ptrNext);
-            return RLE_LIST_SUCCESS;
+        return RLE_LIST_SUCCESS;
     }
     ptr->next = NULL;
     RLEListDestroy(ptrNext);
@@ -146,7 +146,8 @@ char* RLEListExportToString(RLEList list, RLEListResult* result) {
         }
         return NULL;
     }
-    char *out = malloc(sizeof(*out) * RLEListSize(list) * DEFAULT_EXPORTED_LINE_LENGTH + 1)
+    RLEList list_ptr = list;
+    char *out = malloc(sizeof(*out) * RLEListSize(list) * DEFAULT_EXPORTED_LINE_LENGTH + 1);
     char *out_ptr = out;
     int cur_line_length;
 
