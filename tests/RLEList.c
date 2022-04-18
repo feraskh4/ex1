@@ -47,7 +47,7 @@ RLEListResult RLEListAppend(RLEList list, char value) {
         ptr->amount += 1;
         return RLE_LIST_SUCCESS;
     }
-    RLEList newHead = RLEListCreate(newHead);
+    RLEList newHead = RLEListCreate();
     if (!newHead) {
            return RLE_LIST_OUT_OF_MEMORY;
     }
