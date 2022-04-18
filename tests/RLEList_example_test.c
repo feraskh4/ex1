@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "RLEList.c"
 #include "RLEList.h"
 #include "test_utilities.h"
 
